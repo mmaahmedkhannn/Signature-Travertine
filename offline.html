@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H3G21CZ86L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-H3G21CZ86L');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Signature Travertine & Marble</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/icon-192x192.svg">
+    <link rel="shortcut icon" href="favicon.svg">
+    <meta name="theme-color" content="#d4af37">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #050505 0%, #0f0f0f 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .offline-container {
+            max-width: 500px;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(10, 10, 10, 0.95) 100%);
+            border-radius: 16px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .offline-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            fill: #d4af37;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #d4af37;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        .retry-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .retry-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.6);
+        }
+
+        .retry-btn:active {
+            transform: translateY(0);
+        }
+
+        .contact-info {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .contact-info h3 {
+            color: #d4af37;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info a {
+            color: #d4af37;
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d4af37;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="logo">SIGNATURE</div>
+        
+        <svg class="offline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.64 7c-.45-.34-4.93-4-11.64-4-1.5 0-2.89.19-4.15.48L18.18 13.8 23.64 7zm-6.6 8.22L3.27 1.44 2 2.72l2.05 2.06C1.91 5.76.59 6.82.36 7L12 21.5l3.07-4.04 4.28 4.28 1.27-1.28-3.58-3.24zM12 7c1.11 0 2.17.11 3.17.3l1.97-1.97c-1.53-.5-3.25-.8-5.14-.8-3.34 0-5.95 1.01-7.52 2l2.35 2.35C7.96 8.06 9.61 7 12 7z"/>
+        </svg>
+
+        <h1>You're Offline</h1>
+        <p>It looks like you've lost your internet connection. Please check your connection and try again.</p>
+        
+        <button class="retry-btn" onclick="window.location.reload()">Try Again</button>
+
+        <div class="contact-info">
+            <h3>Need to reach us?</h3>
+            <a href="tel:+971551552075">📞 +971 55 1552075</a>
+            <a href="tel:+971555152075">📞 +971 55 515 2075</a>
+            <a href="https://wa.me/971555152075">💬 WhatsApp Us</a>
+        </div>
+    </div>
+
+    <script>
+        // Auto-retry when connection is restored
+        window.addEventListener('online', () => {
+            window.location.reload();
+        });
+    </script>
+</body>
+</html>

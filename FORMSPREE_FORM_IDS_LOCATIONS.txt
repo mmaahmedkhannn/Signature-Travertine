@@ -1,0 +1,77 @@
+================================================================================
+FORMSPREE FORM ID REPLACEMENT LOCATIONS
+================================================================================
+
+After creating your Formspree forms, replace "YOUR_FORM_ID" with your actual 
+Form IDs in the following locations:
+
+================================================================================
+MAIN CONTACT FORM (index.html)
+================================================================================
+
+File: index.html
+Line: ~3448
+
+FIND THIS:
+  <form id="contactForm" name="contact" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+
+REPLACE WITH:
+  <form id="contactForm" name="contact" method="POST" action="https://formspree.io/f/YOUR_MAIN_CONTACT_FORM_ID">
+
+Example:
+  <form id="contactForm" name="contact" method="POST" action="https://formspree.io/f/xrgkqjpn">
+
+
+================================================================================
+PRODUCT ENQUIRY FORMS (All Product Pages)
+================================================================================
+
+Update ALL of these files with the SAME Product Enquiry Form ID:
+
+1. products/travertine.html (Line ~940)
+2. products/marble.html (Line ~940)
+3. products/granite.html (Line ~940)
+4. products/limestone.html (Line ~940)
+5. products/onyx.html (Line ~940)
+6. products/quartzite.html (Line ~940)
+
+FIND THIS IN EACH FILE:
+  <form id="enquiryForm" name="product-enquiry" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+
+REPLACE WITH:
+  <form id="enquiryForm" name="product-enquiry" method="POST" action="https://formspree.io/f/YOUR_PRODUCT_ENQUIRY_FORM_ID">
+
+Example:
+  <form id="enquiryForm" name="product-enquiry" method="POST" action="https://formspree.io/f/yrgkqjpn">
+
+
+================================================================================
+IMPORTANT NOTES
+================================================================================
+
+1. You need TWO different Form IDs:
+   - One for the main contact form (index.html)
+   - One for all product enquiry forms (all product pages)
+
+2. All product pages use the SAME Form ID (you can use one form for all products)
+
+3. After replacing the Form IDs, upload the updated files to Hostinger
+
+4. Test both forms after uploading to make sure they work
+
+
+================================================================================
+QUICK SEARCH & REPLACE COMMANDS
+================================================================================
+
+If using a code editor with Find & Replace:
+
+For index.html:
+  Find: https://formspree.io/f/YOUR_FORM_ID
+  Replace: https://formspree.io/f/YOUR_MAIN_CONTACT_FORM_ID
+
+For all product files:
+  Find: https://formspree.io/f/YOUR_FORM_ID
+  Replace: https://formspree.io/f/YOUR_PRODUCT_ENQUIRY_FORM_ID
+
+================================================================================

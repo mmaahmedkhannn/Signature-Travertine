@@ -1,0 +1,16 @@
+# robots.txt for Signature Travertine & Marble
+# https://www.signaturetervatineandmarble.com
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private directories if any
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.signaturetervatineandmarble.com/sitemap.xml
+
+# Crawl-delay (optional, remove if not needed)
+# Crawl-delay: 1
+

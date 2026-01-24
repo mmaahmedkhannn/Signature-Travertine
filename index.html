@@ -1429,6 +1429,99 @@
             font-size: 15px;
         }
 
+        /* Stone Comparison Guide */
+        .stone-guide {
+            padding: 90px 20px 110px;
+            background: #0f0f0f;
+        }
+
+        .stone-guide-card {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(5, 5, 5, 0.75);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(8px);
+        }
+
+        .stone-guide-table {
+            width: 100%;
+            border-collapse: collapse;
+            color: #f0f0f0;
+        }
+
+        .stone-guide-table th,
+        .stone-guide-table td {
+            text-align: left;
+            padding: 18px 16px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            font-size: 16px;
+        }
+
+        .stone-guide-table th {
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            font-size: 13px;
+        }
+
+        .stone-guide-table tbody tr {
+            transition: background 0.3s ease;
+        }
+
+        .stone-guide-table tbody tr:hover {
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        @media (max-width: 900px) {
+            .stone-guide-card {
+                padding: 20px;
+            }
+
+            .stone-guide-table th,
+            .stone-guide-table td {
+                padding: 14px 12px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .stone-guide-table thead {
+                display: none;
+            }
+
+            .stone-guide-table,
+            .stone-guide-table tbody,
+            .stone-guide-table tr,
+            .stone-guide-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .stone-guide-table tr {
+                margin-bottom: 20px;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+                padding-bottom: 10px;
+            }
+
+            .stone-guide-table td {
+                border: none;
+                padding: 8px 0;
+            }
+
+            .stone-guide-table td::before {
+                content: attr(data-label);
+                display: block;
+                color: #d4af37;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 4px;
+            }
+        }
+
         /* Features Section */
         .features {
             padding: 100px 20px;
@@ -2952,6 +3045,55 @@
                     <p>Modern durability meets natural beauty. Combining marble's elegance with granite's strength for contemporary spaces.</p>
                 </div>
             </a>
+        </div>
+    </section>
+
+    <!-- Stone Comparison Guide -->
+    <section class="stone-guide" id="stone-guide">
+        <h2 class="section-title">Stone Selection Guide</h2>
+        <p class="section-subtitle">Not sure which stone fits your project? Use this quick guide to compare the best applications for each material.</p>
+        <div class="stone-guide-card">
+            <table class="stone-guide-table">
+                <thead>
+                    <tr>
+                        <th>Stone Type</th>
+                        <th>Best For</th>
+                        <th>Signature Benefits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Stone Type">Marble</td>
+                        <td data-label="Best For">Luxury interiors, feature walls, bathrooms</td>
+                        <td data-label="Signature Benefits">Elegant veining, timeless sophistication</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Stone Type">Travertine</td>
+                        <td data-label="Best For">Outdoor patios, facades, warm interiors</td>
+                        <td data-label="Signature Benefits">Natural warmth, versatile finishes</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Stone Type">Granite</td>
+                        <td data-label="Best For">Kitchens, high-traffic floors, outdoor counters</td>
+                        <td data-label="Signature Benefits">Exceptional durability, heat resistance</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Stone Type">Limestone</td>
+                        <td data-label="Best For">Calming interiors, fireplaces, wall cladding</td>
+                        <td data-label="Signature Benefits">Soft texture, understated elegance</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Stone Type">Onyx</td>
+                        <td data-label="Best For">Statement pieces, bars, backlit walls</td>
+                        <td data-label="Signature Benefits">Translucent glow, dramatic patterns</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Stone Type">Quartzite</td>
+                        <td data-label="Best For">Kitchen counters, contemporary interiors</td>
+                        <td data-label="Signature Benefits">Marble-like beauty with granite strength</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 

@@ -1435,6 +1435,17 @@
             background: #0f0f0f;
         }
 
+        .stone-guide .section-title,
+        .stone-guide .section-subtitle {
+            opacity: 0;
+            transform: translateY(12px);
+            animation: stoneGuideFadeUp 0.8s ease forwards;
+        }
+
+        .stone-guide .section-subtitle {
+            animation-delay: 0.15s;
+        }
+
         .stone-guide-card {
             max-width: 1200px;
             margin: 0 auto;
@@ -1444,6 +1455,10 @@
             padding: 30px;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
             backdrop-filter: blur(8px);
+            opacity: 0;
+            transform: translateY(18px);
+            animation: stoneGuideFadeUp 0.9s ease forwards;
+            animation-delay: 0.25s;
         }
 
         .stone-guide-table {
